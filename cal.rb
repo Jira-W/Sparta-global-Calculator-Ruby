@@ -1,12 +1,12 @@
 puts "Which Calculator ?"
 puts "(C)alcuator or (B)MI"
 Type_of_cal = gets.chomp
-
 if ['c', 'C'].include?(Type_of_cal)
+
   puts "(A)dditon, (M)ultiplication, (D)ivision, (S)ubtraction, (P)ower, (Sq)uareRoot"
   Calculator = gets.chomp
 
-      if  ['sq', 'SQ'].include?(Type_of_cal)
+      if  ['sq', 'SQ'].include?(Calculator)
         puts "Number 1"
         num1 = gets.chomp.to_f
       else
@@ -18,17 +18,17 @@ if ['c', 'C'].include?(Type_of_cal)
 
       case Calculator
        when Calculator == "A" , "a"
-          puts " Answer = #{num1+num2}"
+          puts "Answer = #{num1+num2}"
         when Calculator ==  "M" , "m"
-          puts num1 * num2
+          puts "Answer = #{num1*num2}"
         when Calculator == "D" ,"d"
-          puts  num1 / num2
+          puts "Answer = #{num1/num2}"
         when Calculator == "S" , "s"
-          puts num1 - num2
+          puts puts "Answer = #{num1-num2}"
         when Calculator == "P" , "p"
-          puts num1 ** num2
+          puts puts "Answer = #{num1**num2}"
         when Calculator == "SQ" , "sq"
-          puts Math.sqrt(num1)
+          puts "Answer = #{Math.sqrt(num1)}"
       end
   elsif  ['b', 'B'].include?(Type_of_cal)
 
@@ -48,4 +48,5 @@ if ['c', 'C'].include?(Type_of_cal)
         weight = gets.chomp.to_f
       puts "Your BMI is #{(weight/(height*height))*703}"
     end
-  end
+  else
+end
